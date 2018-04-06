@@ -65,3 +65,9 @@ post '/user/:id/posts' do
   Post.create(params[:post])
   redirect '/profile'
 end
+
+post '/sign-out' do
+
+  session[:user_id] = nil
+    redirect '/'
+  end
