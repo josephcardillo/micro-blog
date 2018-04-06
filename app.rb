@@ -67,7 +67,15 @@ post '/user/:id/posts' do
 end
 
 post '/sign-out' do
-
   session[:user_id] = nil
     redirect '/'
+  end
+
+post '/post-deleted' do
+  puts "*********************"
+  puts params.inspect
+  puts "*********************"
+  @post = Post.find(params[:id])
+  @post.destroy
+    redirect '/profile'
   end

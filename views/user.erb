@@ -3,5 +3,8 @@
 <h2>Welcome to <%= @user.fname %>'s Page!</h2>
 <% @posts.each do |post| %>
 <h3><%= post.title %></h3>
+<form class="" action="/post-deleted" method="post">
+  <input type="submit" name="[post]post.id" value="<%= post.id %>">
+</form>
   <p><%= post.content %></p>
 <% end %>
