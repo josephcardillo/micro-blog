@@ -10,19 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180406100827) do
+ActiveRecord::Schema.define(version: 20180406091608) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title", limit: 30
     t.text "content", limit: 150
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "user_id"
-    t.string "username_id"
-  end
-
-  create_table "usernames", force: :cascade do |t|
-    t.string "username", limit: 15
     t.integer "user_id"
   end
 
@@ -31,7 +25,7 @@ ActiveRecord::Schema.define(version: 20180406100827) do
     t.string "lname"
     t.string "password"
     t.string "email"
-    t.integer "username_id"
+    t.string "username"
   end
 
 end
