@@ -25,6 +25,7 @@ end
 
 get '/feed' do
   @posts = Post.all
+  @user = User.all
   erb :feed
 end
 
