@@ -34,23 +34,21 @@ get '/user/:id' do
   erb :user
 end
 
-post '/users/new' do
+post '/user/new' do
   puts "*********************"
   puts params.inspect
   puts "*********************"
   # should be called user instead of post
   User.create(params[:post])
-  redirect '/users'
+  redirect '/'
 end
 
 post '/sign-in' do
-  @user = User.where(fname: params[:fname]).first
+  @user = User.where(username: params[:username]).first
   if @user.password == params[:password]
     session[:user_id] = @user.id
-    flash[:notice] = "You've been signed in successfully."
-    redirect '/'
+    redirect '/feed'
   else
-    flash[:notice] = "There was a problem signing you in."
     redirect '/sign-in-failed'
   end
 end
