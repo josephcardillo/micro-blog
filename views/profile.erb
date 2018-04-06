@@ -1,1 +1,4 @@
 <%= erb :header %>
+<% if current_user %>
+  <h2>Welcome back <%= current_user.fname %>!</h2>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>Feed</h1>
+  <% @posts.each do |post| %>
+    <h4><%= post.title %></h4>
+      <p>Post: <%= post.content %></p>
+      <p>User: <%= post.user_id %></p>
+  <% end %>
