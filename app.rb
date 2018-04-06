@@ -56,3 +56,11 @@ end
 get '/sign-in-failed' do
   erb :sign_in_failed
 end
+
+post '/user/:id/posts' do
+  puts "*********************"
+  puts params.inspect
+  puts "*********************"
+  Post.create(params[:post])
+  redirect '/profile'
+end
