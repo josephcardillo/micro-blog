@@ -1,12 +1,12 @@
 <%= erb :header %>
 <% if current_user %>
-  <h2>Welcome back <%= current_user.fname %>!</h2>
+  <h2>Welcome back <%= current_user.fname %>!<%= current_user.id %></h2>
 <% end %>
 
 <form class="" action="/user/:id/posts" method="post">
     <input type="text" name="[post]title" value="" maxlength="30" size="32" placeholder="Title"><br>
     <textarea rows="3" cols="50" name="[post]content" placeholder="What's on your mind?">
     </textarea><br>
-    <input type="text" name="[post]user_id" value="user_id">
+    <input type="text" style="display:none" name="[post]user_id" value="<%= current_user.id %>">
     <input type="submit" name="" value="Post">
 </form>
