@@ -4,5 +4,9 @@
   <% @posts.each do |post| %>
     <h4><%= post.title %></h4>
         <p>Post: <%= post.content %></p>
+<<<<<<< HEAD
         <p>Username:<a href="/user/<%= post.user_id%>"> <%= post.user.username %></a></p>
+=======
+        <p>Username: <a href="/user/<%= post.user_id %>"> <%= post.user.username %></a></p>
+>>>>>>> b1c5600d5b70c4e3098809dccc5315038be2efe2
     <% end %>
