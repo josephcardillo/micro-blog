@@ -23,6 +23,30 @@ get '/profile' do
   erb :profile
 end
 
+# show post
+get '/post/:id' do
+  @post = Post.find(params[:id])
+  erb :post_page
+end
+
+# delete post
+delete '/post/:id' do
+  puts "*********************"
+  puts params.inspect
+  puts "*********************"
+	@post = Post.delete(params[:id])
+	redirect '/profile'
+end
+
+# edit post
+put '/post/:id' do
+    @post = Post.find(params[:id])
+    @post.update(title: params[:title], content: params[:content])
+    @post.save
+  redirect '/post/'+params[:id]
+end
+
+
 get '/feed' do
   @posts = Post.all
   @user = User.all
@@ -35,6 +59,7 @@ get '/user/:id' do
   erb :user
 end
 
+# create post
 post '/user/new' do
   puts "*********************"
   puts params.inspect
@@ -65,3 +90,17 @@ post '/user/:id/posts' do
   Post.create(params[:post])
   redirect '/profile'
 end
+
+post '/sign-out' do
+  session[:user_id] = nil
+    redirect '/'
+  end
+
+post '/post-deleted' do
+  puts "*********************"
+  puts params.inspect
+  puts "*********************"
+  @post = Post.find(params[:id])
+  @post.destroy
+    redirect '/profile'
+  end
