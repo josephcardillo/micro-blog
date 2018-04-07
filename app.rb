@@ -39,11 +39,17 @@ delete '/post/:id' do
 end
 
 # edit post
-put '/post/:id' do
-    @post = Post.find(params[:id])
-    @post.update(title: params[:title], content: params[:content])
-    @post.save
-  redirect '/post/'+params[:id]
+put '/user/:id' do
+    @user = User.find(params[:id])
+    @user.update(
+      fname: params[:fname],
+      lname: params[:lname],
+      username: params[:username],
+      email: params[:email],
+      password: params[:password]
+    )
+    @user.save
+  redirect '/user/'+params[:id]
 end
 
 
