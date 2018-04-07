@@ -2,7 +2,7 @@
 
 <h1>Feed</h1>
   <% @posts.each do |post| %>
-    <h4><%= post.title %></h4>
+    <h4><a href="/post/<%= post.id %>"><%= post.title %></a></h4>
         <p>Post: <%= post.content %></p>
         <p>Username:<a href="/user/<%= post.user_id %>"> <%= post.user.username %></a></p>
     <% end %>
