@@ -71,7 +71,7 @@ post '/sign-out' do
     redirect '/'
   end
 
-delete '/post-deleted' do
+post '/post-deleted' do
   puts "*********************"
   puts params.inspect
   puts "*********************"
