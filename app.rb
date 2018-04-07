@@ -46,6 +46,20 @@ put '/post/:id' do
   redirect '/post/'+params[:id]
 end
 
+# edit user
+put '/user/:id' do
+    @user = User.find(params[:id])
+    @user.update(
+      fname: params[:fname],
+      lname: params[:lname],
+      email: params[:email],
+      username: params[:username],
+      password: params[:password]
+    )
+    @user.save
+  redirect '/user/'+params[:id]
+end
+
 
 get '/feed' do
   @posts = Post.all
