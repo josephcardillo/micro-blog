@@ -1,8 +1,11 @@
 <%= erb :header %>
 
+<div class="container1">
 <h1>Feed</h1>
   <% @posts.each do |post| %>
+    <p>-------------------</p>
     <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
         <p>Post: <%= post.content %></p>
         <p>By: <a href="/user/<%= post.user.username %>"><%= post.user.username %></a></p>
     <% end %>
+</div>

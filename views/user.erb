@@ -1,32 +1,38 @@
 <%= erb :header %>
 
-<h2><%= @user.fname %> <%= @user.lname %>'s Page</h2>
+<div class="container1">
+  <h2><%= @user.fname %> <%= @user.lname %>'s Page</h2>
 
-<h1>Account Details</h1>
-<p>Username: <%= @user.username %></p>
-<p>Email: <%= @user.email %></p>
-<p>Password: <%= @user.password %></p>
+  <h1>Account Details</h1>
+  <p>Username: <%= @user.username %></p>
+  <p>Email: <%= @user.email %></p>
+  <p>Password: <%= @user.password %></p>
 
-<!-- Hide below on button click -->
-<h2>Edit User</h2>
-<form action="/user/<%= @user.id %>" method="post">
-    <input type="hidden" name="_method" value="PUT">
+  <!-- Hide below on button click -->
+  <button onclick="toggle.open()" type="button" name="button">Edit Profile</button>
+  <div class="toggleEditUser">
+    <h2>Edit User</h2>
+    <form action="/user/<%= @user.id %>" method="post">
+        <input type="hidden" name="_method" value="PUT">
 
-    <input type="text" name="fname" value="<%= @user.fname %>"><br>
-    <input type="text" name="lname" value="<%= @user.lname %>"><br>
-    <input type="text" name="username" value="<%= @user.username %>"><br>
-    <input type="text" name="email" value="<%= @user.email %>"><br>
-    <input type="text" name="password" value="<%= @user.password %>"><br>
+        <input type="text" name="fname" value="<%= @user.fname %>"><br>
+        <input type="text" name="lname" value="<%= @user.lname %>"><br>
+        <input type="text" name="username" value="<%= @user.username %>"><br>
+        <input type="text" name="email" value="<%= @user.email %>"><br>
+        <input type="text" name="password" value="<%= @user.password %>"><br>
 
-    <input type="submit" value="Update User Profile">
-</form>
+        <input onclick="toggle.close()" type="submit" value="Update User Profile">
+    </form>
 
-<form class="" action="/user/<%=@user.id%>" method="post">
-  <input type="hidden" name="_method" value="DELETE">
-  <input type="submit" name="" value="Delete Account">
-</form>
+    <form class="" action="/user/<%=@user.id%>" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" name="" value="Delete Account">
+    </form>
+  </div>
 
-<% @posts.each do |post| %>
-<h3><a href="/post/<%= post.id %>"><%= post.title %></a></h3>
-  <p><%= post.content %></p>
-<% end %>
+  <% @posts.each do |post| %>
+  <p>-------------------</p>
+  <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
+    <p><%= post.content %></p>
+  <% end %>
+</div>

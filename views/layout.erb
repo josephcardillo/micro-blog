@@ -6,7 +6,7 @@
     <title>m i c r o b l o g</title>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Cutive+Mono|Nova+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/css/main.css">
-    
+
   </head>
   <body>
       <%= flash[:notice] if flash[:notice] %>
@@ -14,5 +14,7 @@
       <h1>Micro Blog</h1>
     </header>
     <%= yield %>
+    <script type="text/javascript" src="/stylesheets/js/script.js">
+    </script>
   </body>
 </html>
