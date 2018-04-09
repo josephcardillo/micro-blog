@@ -2,12 +2,9 @@ h2 {
   font-family: 'Nova Mono', monospace;
   font-size: 38px;
   text-decoration: underline;
-<<<<<<< HEAD
   margin-left: 50px;
   padding-left: 70px;
 
-=======
->>>>>>> f6e8f859fef9435f70a3876eeaa77bc3382cdd91
 }
 
 h1 {
@@ -35,14 +32,9 @@ input {
   border-style: double;
 }
 
-<<<<<<< HEAD
 .inputButton:hover{
   background-color: hotpink:
 
-=======
-.inputButton:hover {
-  background-color: hotpink;
->>>>>>> f6e8f859fef9435f70a3876eeaa77bc3382cdd91
 }
 
 textarea {
@@ -53,12 +45,8 @@ textarea {
   border-style: groove;
   border-width: thick;
   margin-top: 35px;
-<<<<<<< HEAD
-=======
   margin-bottom: 10px;
->>>>>>> f6e8f859fef9435f70a3876eeaa77bc3382cdd91
 }
-
 .inputFont {
   font-family: 'Cutive Mono', monospace;
   font-size: 18px;
@@ -117,7 +105,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: darkred;
+  background-color: #333;
   display: flex;
   justify-content: space-evenly;
 }
