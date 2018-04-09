@@ -71,6 +71,13 @@ put '/user/:id' do
   redirect '/user/'+params[:id]
 end
 
+delete '/user/:id' do
+  puts "*********************"
+  puts params.inspect
+  puts "*********************"
+	@user = User.delete(params[:id])
+	redirect '/'
+end
 
 get '/feed' do
   @posts = Post.all
