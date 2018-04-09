@@ -1,6 +1,6 @@
 
 
-<h2>l o g i n</h2>
+<h2>Login</h2>
 <!-- takes fname and password and posts to sign-in params hash -->
 <form class="" action="sign-in" method="post">
   <input type="text" name="username" placeholder="Username">
@@ -8,11 +8,18 @@
   <input type="submit" name="" value="Sign In">
 </form>
 
-<h2>g e t - s t a r t e d</h2>
+<h2>Get Started</h2>
 
 <form class="" action="/user/new" method="post">
-  <input type="text" name="[post]fname" placeholder="First Name">
-  <input type="text" name="[post]lname" placeholder="Last Name">
+  <div class="row">
+    <div class="col">
+    <input type="text" class="form-control" name="[post]fname" placeholder="First Name">
+    </div>
+    <div class="col">
+  <input type="text" class="form-control" name="[post]lname" placeholder="Last Name">
+    </div>
+  </div>
+
   <input type="password" name="[post]password" placeholder="Password">
   <input type="text" name="[post]email" placeholder="Email">
   <input type="text" name="[post]username" value="Username">
