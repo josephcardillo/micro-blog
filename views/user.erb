@@ -12,15 +12,15 @@
 <form action="/user/<%= @user.id %>" method="post">
     <input type="hidden" name="_method" value="PUT">
 
-    <input type="text" name="fname" value="<%= @post.fname %>">
+    <input type="text" name="fname" value="<%= @user.fname %>">
     <br>
-    <input type="text" name="lname" value="<%= @post.lname %>">
+    <input type="text" name="lname" value="<%= @user.lname %>">
     <br>
-    <input type="text" name="username" value="<%= @post.username %>">
+    <input type="text" name="username" value="<%= @user.username %>">
     <br>
-    <input type="text" name="email" value="<%= @post.email %>">
+    <input type="text" name="email" value="<%= @user.email %>">
     <br>
-    <input type="text" name="password" value="<%= @post.password %>"><br>
+    <input type="text" name="password" value="<%= @user.password %>"><br>
 
     <input type="submit" value="Update User Profile">
 </form>
