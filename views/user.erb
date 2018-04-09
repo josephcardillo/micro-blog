@@ -21,6 +21,11 @@
     <input type="submit" value="Update User Profile">
 </form>
 
+<form class="" action="/user/<%=@user.id%>" method="post">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" name="" value="Delete Account">
+</form>
+
 <% @posts.each do |post| %>
 <h3><a href="/post/<%= post.id %>"><%= post.title %></a></h3>
   <p><%= post.content %></p>

@@ -65,6 +65,18 @@ put '/user/:id' do
   redirect '/user/'+params[:id]
 end
 
+# delete user
+delete '/user/:id' do
+  puts "*********************"
+  puts params.inspect
+  puts "*********************"
+  @user = User.find(params[:id])
+  @posts = @user.posts
+  @posts.delete
+	@user = User.delete(params[:id])
+	redirect '/'
+end
+
 
 get '/feed' do
   @posts = Post.all
@@ -115,11 +127,11 @@ post '/sign-out' do
     redirect '/'
   end
 
-post '/post-deleted' do
-  puts "*********************"
-  puts params.inspect
-  puts "*********************"
-  @post = Post.find(params[:id])
-  @post.destroy
-    redirect '/profile'
-  end
+# post '/post-deleted' do
+#   puts "*********************"
+#   puts params.inspect
+#   puts "*********************"
+#   @post = Post.find(params[:id])
+#   @post.destroy
+#     redirect '/profile'
+#   end
