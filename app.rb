@@ -2,6 +2,7 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'bundler/setup'
 require './models'
+require 'sinatra/flash'
 enable :sessions
 
 set :database, "sqlite3:microblog.sqlite3"
@@ -107,11 +108,20 @@ end
 
 post '/sign-in' do
   @user = User.where(username: params[:username]).first
-  if @user.password == params[:password]
+  puts "*********************"
+  puts @user
+  puts "*********************"
+  # unless @user?
+  #   flash[:notice] = "You're sign-in attempt has failed."
+  if @user.nil?
+    flash[:notice] = "Username does not exist."
+    redirect '/'
+  elsif @user.password == params[:password]
     session[:user_id] = @user.id
     redirect '/feed'
   else
-    redirect '/sign-in-failed'
+    flash[:notice] = "You're login attempt has failed."
+    redirect '/'
   end
 end
 
