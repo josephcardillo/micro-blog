@@ -1,4 +1,6 @@
 <%= erb :header %>
+
+</div class="container1">
 <% if current_user %>
   <h2>Welcome back <%= current_user.fname %>!</h2>
 <% end %>
@@ -10,3 +12,4 @@
     <input type="text" style="display:none" name="[post]user_id" value="<%= current_user.id %>">
     <input type="submit" name="" value="Post">
 </form>
+</div>
