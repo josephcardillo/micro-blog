@@ -1,6 +1,10 @@
 h2 {
   font-family: 'Nova Mono', monospace;
   font-size: 38px;
+  text-decoration: underline;
+  margin-left: 50px;
+  padding-left: 70px;
+
 }
 
 h1 {
@@ -24,10 +28,23 @@ input {
   font-family: 'Cutive Mono', monospace;
   font-size: 18px;
   box-shadow: 8px 8px 16px #888888;
+  padding: 8px;
+  border-style: double;
+}
+
+.inputButton:hover{
+  background-color: hotpink:
+
 }
 
 textarea {
   box-shadow: 8px 8px 16px #888888;
+  padding: 10px;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 18px;
+  border-style: groove;
+  border-width: thick;
+  margin-top: 35px;
 }
 .inputFont {
   font-family: 'Cutive Mono', monospace;
@@ -35,9 +52,12 @@ textarea {
   box-shadow:10px;
 }
 
-textarea{
-  box-shadow:10px;
+form{
+  display: block;
+  margin-top: 0em;
+  margin-left: 45px;
 }
+
 
 ul {
     list-style-type: none;
