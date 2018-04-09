@@ -1,11 +1,30 @@
 h2 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nova Mono', monospace;
+  font-size: 38px;
 }
 
 h1 {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Nova Mono', monospace;
+  font-size: 32px;
 }
 
 p {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Cutive Mono', monospace;
+  /* font-family: 'Crimson Text', serif; */
+  font-size: 22px;
+}
+
+li {
+  font-family: 'Nova Mono', monospace;
+  font-size: 32px;
+}
+
+input {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 18px;
+}
+
+.inputFont {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 18px;
 }
