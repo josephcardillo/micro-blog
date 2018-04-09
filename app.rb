@@ -95,8 +95,8 @@ get '/feed' do
   erb :feed
 end
 
-get '/user/:id' do
-  @user = User.find(params[:id])
+get '/user/:username' do
+  @user = User.find_by(username: params[:username])
   @posts = @user.posts.reverse
   erb :user
 end
