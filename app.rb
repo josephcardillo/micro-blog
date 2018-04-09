@@ -69,7 +69,7 @@ put '/user/:id' do
       password: params[:password]
     )
     @user.save
-  redirect '/user/'+params[:id]
+  redirect '/user/'+params[:username]
 end
 
 # delete user
