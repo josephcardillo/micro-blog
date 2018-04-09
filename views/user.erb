@@ -21,12 +21,12 @@
         <input type="text" name="email" value="<%= @user.email %>"><br>
         <input type="text" name="password" value="<%= @user.password %>"><br>
 
-        <input onclick="toggle.close()" type="submit" value="Update User Profile">
+        <input class="inputButton" onclick="toggle.close()" type="submit" value="Update User Profile">
     </form>
 
     <form class="" action="/user/<%=@user.id%>" method="post">
       <input type="hidden" name="_method" value="DELETE">
-      <input type="submit" name="" value="Delete Account">
+      <input class="inputButton" type="submit" name="" value="Delete Account">
     </form>
   </div>
 
