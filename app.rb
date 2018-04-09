@@ -23,6 +23,11 @@ get '/profile' do
   erb :profile
 end
 
+get '/create-post' do
+  # @user = User.all
+  erb :create_post
+end
+
 # show post
 get '/post/:id' do
   @post = Post.find(params[:id])
@@ -46,6 +51,20 @@ put '/user/:id' do
       lname: params[:lname],
       username: params[:username],
       email: params[:email],
+      password: params[:password]
+    )
+    @user.save
+  redirect '/user/'+params[:id]
+end
+
+# edit user
+put '/user/:id' do
+    @user = User.find(params[:id])
+    @user.update(
+      fname: params[:fname],
+      lname: params[:lname],
+      email: params[:email],
+      username: params[:username],
       password: params[:password]
     )
     @user.save

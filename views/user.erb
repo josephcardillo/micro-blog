@@ -1,16 +1,27 @@
 <%= erb :header %>
 
+<<<<<<< HEAD
 <h2><%= @user.fname %><%= @user.lname %>'s Page!</h2>
+=======
+<h2><%= @user.fname %> <%= @user.lname %>'s Page</h2>
+>>>>>>> cec0a35cfee5987b90e3c85485569e87af24f99c
 
 <h1>Account Details</h1>
 <p>Username: <%= @user.username %></p>
 <p>Email: <%= @user.email %></p>
+<<<<<<< HEAD
 <p>Password: <%= @user.password%></p>
 
+=======
+<p>Password: <%= @user.password %></p>
+
+<!-- Hide below on button click -->
+>>>>>>> cec0a35cfee5987b90e3c85485569e87af24f99c
 <h2>Edit User</h2>
 <form action="/user/<%= @user.id %>" method="post">
     <input type="hidden" name="_method" value="PUT">
 
+<<<<<<< HEAD
     <input type="text" name="fname" value="<%= @post.fname %>">
     <br>
     <input type="text" name="lname" value="<%= @post.lname %>">
@@ -20,11 +31,21 @@
     <input type="text" name="email" value="<%= @post.email %>">
     <br>
     <input type="text" name="password" value="<%= @post.password %>"><br>
+=======
+    <input type="text" name="fname" value="<%= @user.fname %>"><br>
+    <input type="text" name="lname" value="<%= @user.lname %>"><br>
+    <input type="text" name="username" value="<%= @user.username %>"><br>
+    <input type="text" name="email" value="<%= @user.email %>"><br>
+    <input type="text" name="password" value="<%= @user.password %>"><br>
+>>>>>>> cec0a35cfee5987b90e3c85485569e87af24f99c
 
     <input type="submit" value="Update User Profile">
 </form>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cec0a35cfee5987b90e3c85485569e87af24f99c
 <% @posts.each do |post| %>
 <h3><a href="/post/<%= post.id %>"><%= post.title %></a></h3>
   <p><%= post.content %></p>
