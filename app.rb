@@ -85,14 +85,14 @@ end
 
 
 get '/feed' do
-  @posts = Post.all
+  @posts = Post.all.reverse
   @user = User.all
   erb :feed
 end
 
 get '/user/:id' do
   @user = User.find(params[:id])
-  @posts = @user.posts
+  @posts = @user.posts.reverse
   erb :user
 end
 
