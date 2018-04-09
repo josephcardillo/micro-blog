@@ -8,7 +8,7 @@
 
   <form class="" action="/post/<%=@post.id%>" method="post">
     <input type="hidden" name="_method" value="DELETE">
-    <input type="submit" name="" value="Delete Post">
+    <input class="inputButton" type="submit" name="" value="Delete Post">
   </form>
 
   <h2>Edit Post</h2>
@@ -20,7 +20,11 @@
 
       <input maxlength="30" size="32" type="text" name="title" value="<%= @post.title %>"><br>
       <textarea rows="3" cols="50" name="content" value="<%= @post.content %>"></textarea><br>
+<<<<<<< HEAD
 
       <input type="submit" value="Edit Post">
+=======
+      <input class="inputButton" type="submit" value="Edit Post">
+>>>>>>> 6927f8804eef48349d337bf34b34992081dc1f17
   </form>
 </div>
