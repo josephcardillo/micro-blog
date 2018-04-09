@@ -23,6 +23,11 @@ get '/profile' do
   erb :profile
 end
 
+get '/create-post' do
+  # @user = User.all
+  erb :create_post
+end
+
 # show post
 get '/post/:id' do
   @post = Post.find(params[:id])
