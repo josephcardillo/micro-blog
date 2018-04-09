@@ -78,21 +78,26 @@ delete '/user/:id' do
   puts params.inspect
   puts "*********************"
   @user = User.find(params[:id])
-  @posts = @user.posts
-  @posts.delete
-	@user = User.delete(params[:id])
+  # @posts = User.find(params[:id]).posts
+  # @posts.delete
+  @posts = Post.all
+  @posts.each do |post|
+    if post.user_id == @user.id
+	  post.delete
 	redirect '/'
+    end
+  end
 end
 
 get '/feed' do
-  @posts = Post.all
+  @posts = Post.all.reverse
   @user = User.all
   erb :feed
 end
 
 get '/user/:id' do
   @user = User.find(params[:id])
-  @posts = @user.posts
+  @posts = @user.posts.reverse
   erb :user
 end
 
@@ -118,7 +123,7 @@ post '/sign-in' do
     redirect '/'
   elsif @user.password == params[:password]
     session[:user_id] = @user.id
-    redirect '/feed'
+    redirect '/profile'
   else
     flash[:notice] = "You're login attempt has failed."
     redirect '/'
