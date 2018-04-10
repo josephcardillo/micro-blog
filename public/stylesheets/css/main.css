@@ -19,9 +19,10 @@ h1 {
 }
 
 p {
-  font-family: 'Cutive Mono', monospace;
+  /* font-family: 'Cutive Mono', monospace; */
+  font-family: 'Shadows Into Light Two', cursive;
   /* font-family: 'Crimson Text', serif; */
-  font-size: 22px;
+  font-size: 48px;
 }
 
 li {
@@ -73,11 +74,11 @@ ul {
 }
 
 li a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 h2 a {
@@ -130,4 +131,11 @@ li a:hover {
 body {
   background: url(/images/unicorn1.png);
   background-size: cover;
+}
+
+.postBackGround {
+  border-style: none;
+  box-shadow: 8px 8px 16px #888888;
+  background-color: white;
+  opacity: 0.9;
 }
