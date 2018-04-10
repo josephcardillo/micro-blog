@@ -7,15 +7,23 @@
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Cutive+Mono|Nova+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/stylesheets/css/main.css">
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-
+    <script type="text/javascript" src="https://rawgit.com/wilq32/jqueryrotate/master/jQueryRotate.js" ></script>
   </head>
   <body>
       <%= flash[:notice] if flash[:notice] %>
     <header>
       <h1>Micro Blog</h1>
     </header>
+    <div>
+      <img id="clickMe" class="uniImage2" src="/images/unicorn2.png" alt="unicorn">
+    </div>
     <%= yield %>
+
     <script type="text/javascript" src="/stylesheets/js/script.js">
     </script>
+    <script>
+      toggle.uniAni();
+    </script>
+
   </body>
 </html>

@@ -4,6 +4,8 @@ h2 {
   color: black;
   font-style: italic;
   background-color: #9ed6df;
+  padding: 5px 5px 5px 20px;
+  opacity: 0.8;
   /* text-decoration: underline; */
 }
 
@@ -12,6 +14,8 @@ h1 {
   font-size: 32px;
   font-style: italic;
   background-color: #9ed6df;
+  padding: 5px 5px 5px 20px;
+  opacity: 0.8;
 }
 
 p {
@@ -46,7 +50,7 @@ textarea {
   padding: 10px;
   font-family: 'Cutive Mono', monospace;
   font-size: 18px;
-  border-style: groove;
+  border-style: hidden;
   border-width: thick;
   margin-top: 35px;
   margin-bottom: 10px;
@@ -115,6 +119,13 @@ li a:hover {
   position: fixed;
   top: 15px;
   }
+
+.uniImage2 {
+  width: 300px;
+  position: fixed;
+  bottom: -200px;
+  right: -75px;
+}
 
 body {
   background: url(/images/unicorn1.png);
