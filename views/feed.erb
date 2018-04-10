@@ -1,19 +1,6 @@
 <%= erb :header %>
 
 <div class="container1">
-<<<<<<< HEAD
-<h1>Feed</h1>
-  <% @posts.each do |post| %>
-
-  <div class="postBackGround">
-            <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
-
-                    <p>Post: <%= post.content %></p>
-                    <p>By: <a href="/user/<%= post.user.username %>"><%= post.user.username %></a></p>
-                </div>
-            <% end %>
-    </div>
-=======
     <h1>Feed</h1>
       <% @posts.each do |post| %>
 
@@ -25,4 +12,3 @@
         <% end %>
 
 </div>
->>>>>>> 8891d8a926e2a87441a487e7879925949513a7ce
