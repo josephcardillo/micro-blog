@@ -133,3 +133,9 @@ body {
   background: url(/images/unicorn1.png);
   background-size: cover;
 }
+
+.postBackGround{
+  border-style: none;
+  box-shadow: 8px 8px 16px #888888;
+
+}
