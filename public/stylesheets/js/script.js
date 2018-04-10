@@ -1,3 +1,5 @@
+var audio = "/sounds/magic-chime-06.mp3"
+
 var toggle = {
   open() {
     document.getElementsByClassName("toggleEditUser")[0].style.display = "block";
@@ -10,8 +12,8 @@ var toggle = {
       $(".uniImage2").animate({
         width: "300px",
         position: "fixed",
-        top: "-200px",
-        left: "-75px"
+        top: "-400px",
+        left: "-250px"
       }, 3000)
     });
   }
@@ -29,3 +31,13 @@ $("#clickMe").rotate({
     },
   }
 });
+
+// Play pixy dust when unicorn is clicked
+var playing = false;
+var audio = document.getElementById("audio");
+function play() {
+    audio.play();
+    // audio.on("ended", function() {
+    //   audio.stop();
+    // })
+}
