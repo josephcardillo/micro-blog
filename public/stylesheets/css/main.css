@@ -103,3 +103,16 @@ li a:hover {
 .toggleEditUser {
   display: none;
 }
+
+/* Images attributes */
+.uniImage1 {
+  width: 100%;
+  position: fixed;
+  top: 15px;
+  }
+
+body {
+  background: url(/images/unicorn1.png);
+  background-size: cover;
+
+}
