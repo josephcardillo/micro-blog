@@ -1,15 +1,11 @@
 h2 {
   font-family: 'Nova Mono', monospace;
   font-size: 38px;
-<<<<<<< HEAD
   text-decoration: underline;
   margin-left: 50px;
   padding-left: 70px;
-
-=======
   color: black;
   /* text-decoration: underline; */
->>>>>>> 6927f8804eef48349d337bf34b34992081dc1f17
 }
 
 h1 {
@@ -41,14 +37,8 @@ input {
   border-style: double;
 }
 
-<<<<<<< HEAD
 .inputButton:hover{
-  background-color: hotpink:
-
-=======
-.inputButton:hover {
   background-color: #f4f07d;
->>>>>>> 9123c95871bc2c2a81b3c6628f26d944417a6512
 }
 
 textarea {
@@ -119,11 +109,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-<<<<<<< HEAD
   background-color: #333;
-=======
   background-color: #f4f07d;
->>>>>>> 9123c95871bc2c2a81b3c6628f26d944417a6512
   display: flex;
   justify-content: space-evenly;
   opacity: 0.9;
