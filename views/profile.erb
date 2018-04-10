@@ -5,19 +5,12 @@
     <h2>Welcome back <%= current_user.fname %>!</h2>
   <% end %>
 
-
- <h2>Create Post</h2>
-
   <h2>Create New Post</h2>
-
   <form class="" action="/user/:id/posts" method="post">
       <input type="text" name="[post]title" value="" maxlength="30" size="32" placeholder="Title"><br>
       <textarea rows="3" cols="50" name="[post]content" placeholder="What's on your mind...">
       </textarea><br>
       <input type="text" style="display:none" name="[post]user_id" value="<%= current_user.id %>">
-
-      <input class"inputButton" type="submit" name="" value="Post">
-
-
+      <input class="inputButton" type="submit" name="" value="Post">
   </form>
 </div>
