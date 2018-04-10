@@ -14,6 +14,8 @@ h1 {
   font-size: 32px;
   font-style: italic;
   background-color: #9ed6df;
+  padding: 5px 5px 5px 20px;
+  opacity: 0.8;
 }
 
 p {
