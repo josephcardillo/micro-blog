@@ -52,7 +52,7 @@ textarea {
   padding: 10px;
   font-family: 'Cutive Mono', monospace;
   font-size: 18px;
-  border-style: groove;
+  border-style: hidden;
   border-width: thick;
   margin-top: 35px;
   margin-bottom: 10px;
