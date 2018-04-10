@@ -41,9 +41,14 @@ input {
   border-style: double;
 }
 
+<<<<<<< HEAD
 .inputButton:hover{
   background-color: hotpink:
 
+=======
+.inputButton:hover {
+  background-color: #f4f07d;
+>>>>>>> 9123c95871bc2c2a81b3c6628f26d944417a6512
 }
 
 textarea {
@@ -114,14 +119,19 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
+<<<<<<< HEAD
   background-color: #333;
+=======
+  background-color: #f4f07d;
+>>>>>>> 9123c95871bc2c2a81b3c6628f26d944417a6512
   display: flex;
   justify-content: space-evenly;
+  opacity: 0.9;
 }
 
 li a {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -132,7 +142,7 @@ h2 a {
 }
 
 h2 a:hover {
-    background-color: hotpink;
+    background-color: #f4f07d;
     color: white;
     text-decoration: underline;
 }
@@ -142,7 +152,7 @@ h2 a:visited {
 }
 
 li a:hover {
-    background-color: #111;
+    background-color: #f4f07d;
 }
 
 .logOutButton {
@@ -158,4 +168,17 @@ li a:hover {
 
 .toggleEditUser {
   display: none;
+}
+
+/* Images attributes */
+.uniImage1 {
+  width: 100%;
+  position: fixed;
+  top: 15px;
+  }
+
+body {
+  background: url(/images/unicorn1.png);
+  background-size: cover;
+
 }
