@@ -2,12 +2,16 @@ h2 {
   font-family: 'Nova Mono', monospace;
   font-size: 38px;
   color: black;
+  font-style: italic;
+  background-color: #9ed6df;
   /* text-decoration: underline; */
 }
 
 h1 {
   font-family: 'Nova Mono', monospace;
   font-size: 32px;
+  font-style: italic;
+  background-color: #9ed6df;
 }
 
 p {
@@ -87,7 +91,7 @@ h2 a:visited {
 }
 
 li a:hover {
-    background-color: #f4f07d;
+    background-color: #ed80a6;
 }
 
 .logOutButton {
@@ -115,5 +119,4 @@ li a:hover {
 body {
   background: url(/images/unicorn1.png);
   background-size: cover;
-
 }
