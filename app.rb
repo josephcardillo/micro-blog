@@ -78,8 +78,6 @@ delete '/user/:id' do
   puts params.inspect
   puts "*********************"
   @user = User.find(params[:id])
-  # @posts = User.find(params[:id]).posts
-  # @posts.delete
   @posts = Post.all
   @posts.each do |post|
     if post.user_id == @user.id
@@ -146,12 +144,3 @@ post '/sign-out' do
   session[:user_id] = nil
     redirect '/'
   end
-
-# post '/post-deleted' do
-#   puts "*********************"
-#   puts params.inspect
-#   puts "*********************"
-#   @post = Post.find(params[:id])
-#   @post.destroy
-#     redirect '/profile'
-#   end

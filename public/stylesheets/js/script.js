@@ -9,22 +9,6 @@ var toggle = {
   },
   uniAni() {
     $("#clickMe").click(function() {
-<<<<<<< HEAD
-      $( ".uniImage2" ).animate({
-        left: "+=50",
-        height: "500px"
-      }, 5000)
-    });
-  },
-
-  rotateUni(){
-    $('#clickMe').click(function(){
-      $(".uniImage2").rotate(function(){
-        
-      })
-      $(this).rotate();
-    }).click();
-=======
       $(".uniImage2").animate({
         width: "300px",
         position: "fixed",
@@ -32,7 +16,6 @@ var toggle = {
         left: "-250px"
       }, 3000)
     });
->>>>>>> 5707239c6a469ea8d2d3652f5bd07cc8f5b66a7f
   }
 }
 
