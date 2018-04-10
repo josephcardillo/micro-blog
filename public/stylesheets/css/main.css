@@ -19,10 +19,11 @@ h1 {
 }
 
 p {
-font-family: 'Contrail One', cursive;
+font-family: 'Kalam', cursive;
   /* font-family: 'Crimson Text', serif; */
-  font-size: 22px;
-
+  font-size: 30px;
+  font-weight: 700px;
+  color: orangered;
 }
 
 li {
