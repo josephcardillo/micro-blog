@@ -14,7 +14,7 @@ var toggle = {
         position: "fixed",
         top: "-400px",
         left: "-250px"
-      }, 3000)
+      }, 2000)
     });
   }
 }
