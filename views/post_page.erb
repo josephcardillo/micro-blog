@@ -2,20 +2,25 @@
 
 <div class="container1">
 
-  <h2><%= @post.title %></h2>
-  <div class="postBackGround">
-    <p><%= @post.content %></p>
-  </div>
-  <form class="" action="/post/<%=@post.id%>" method="post">
-    <input type="hidden" name="_method" value="DELETE">
-    <input class="inputButton" type="submit" name="" value="Delete Post">
-  </form>
+    <h2><%= @post.title %></h2>
+    <div class="postBackGround">
+      <p><%= @post.content %></p>
+      <p>By: <a href="/user/<%= @post.user.username %>"><%= @post.user.username %></a></p>
+    </div>
 
-  <h2>Edit Post</h2>
-  <form action="/post/<%= @post.id %>" method="post">
-      <input type="hidden" name="_method" value="PUT">
-      <input maxlength="30" size="32" type="text" name="title" value="<%= @post.title %>"><br>
-      <textarea rows="3" cols="50" name="content" value="<%= @post.content %>"></textarea><br>
-      <input class="inputButton" type="submit" value="Edit Post">
-  </form>
+    <% if current_user != nil && current_user.id == @post.user_id %>
+
+    <form class="" action="/post/<%=@post.id%>" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <input class="inputButton" type="submit" name="" value="Delete Post">
+    </form>
+
+    <h2>Edit Post</h2>
+    <form action="/post/<%= @post.id %>" method="post">
+        <input type="hidden" name="_method" value="PUT">
+        <input maxlength="30" size="32" type="text" name="title" value="<%= @post.title %>"><br>
+        <textarea rows="6" cols="25" name="content" value="<%= @post.content %>"></textarea><br>
+        <input class="inputButton" type="submit" value="Edit Post">
+    </form>
+  <% end %>
 </div>
