@@ -8,11 +8,14 @@
   <p>Email: <%= @user.email %></p>
   <p>Password: <%= @user.password %></p>
 
+
 <% if current_user != nil && current_user.id == @user.id %>
 
   <!-- Hide below on button click -->
   <button onclick="toggle.open()" type="button" name="button">Edit Profile</button>
   <div class="toggleEditUser">
+
+
     <h2>Edit User</h2>
     <form action="/user/<%= @user.id %>" method="post">
         <input type="hidden" name="_method" value="PUT">
@@ -32,6 +35,7 @@
     </form>
   </div>
 <% end %>
+
   <% @posts.each do |post| %>
   <p>-------------------</p>
   <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
