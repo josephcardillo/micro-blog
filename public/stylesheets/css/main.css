@@ -19,10 +19,11 @@ h1 {
 }
 
 p {
-  /* font-family: 'Cutive Mono', monospace; */
-  font-family: 'Shadows Into Light Two', cursive;
+  font-family: 'Cutive Mono', monospace;
+  /* font-family: 'Shadows Into Light Two', cursive; */
   /* font-family: 'Crimson Text', serif; */
-  font-size: 48px;
+  font-size: 32px;
+  padding: 10px;
 }
 
 li {
@@ -101,8 +102,8 @@ li a:hover {
 
 .logOutButton {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 28px;
+  right: 18px;
 }
 
 .container1 {
@@ -138,4 +139,16 @@ body {
   box-shadow: 8px 8px 16px #888888;
   background-color: white;
   opacity: 0.9;
+}
+
+button {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 18px;
+  box-shadow: 8px 8px 16px #888888;
+  padding: 8px;
+  border-style: double;
+}
+
+a:link {
+  color: black;
 }
