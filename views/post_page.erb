@@ -3,9 +3,9 @@
 <div class="container1">
 
   <h2><%= @post.title %></h2>
-
-  <p><%= @post.content %></p>
-
+  <div class="postBackGround">
+    <p><%= @post.content %></p>
+  </div>
   <form class="" action="/post/<%=@post.id%>" method="post">
     <input type="hidden" name="_method" value="DELETE">
     <input class="inputButton" type="submit" name="" value="Delete Post">
