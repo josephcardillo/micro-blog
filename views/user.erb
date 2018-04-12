@@ -8,6 +8,8 @@
   <p>Email: <%= @user.email %></p>
   <p>Password: <%= @user.password %></p>
 
+<% if current_user != nil && current_user.id == @user.id %>
+
   <!-- Hide below on button click -->
   <button onclick="toggle.open()" type="button" name="button">Edit Profile</button>
   <div class="toggleEditUser">
@@ -29,7 +31,7 @@
       <input class="inputButton" type="submit" name="" value="Delete Account">
     </form>
   </div>
-
+<% end %>
   <% @posts.each do |post| %>
   <p>-------------------</p>
   <h2><a href="/post/<%= post.id %>"><%= post.title %></a></h2>
