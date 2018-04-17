@@ -46,7 +46,7 @@ end
 
 # edit post
 put '/post/:id' do
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
     @post = Post.find(params[:id])
     @post.update(title: params[:title], content: params[:content])
     @post.save

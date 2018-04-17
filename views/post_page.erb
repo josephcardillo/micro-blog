@@ -19,7 +19,7 @@
     <form action="/post/<%= @post.id %>" method="post">
         <input type="hidden" name="_method" value="PUT">
         <input maxlength="30" size="32" type="text" name="title" value="<%= @post.title %>"><br>
-        <textarea rows="6" cols="25" name="content" value="<%= @post.content %>"></textarea><br>
+        <textarea maxlength="150" rows="6" cols="25" name="content" value="<%= @post.content %>"></textarea><br>
         <input class="inputButton" type="submit" value="Edit Post">
     </form>
   <% end %>
